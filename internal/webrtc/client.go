@@ -19,8 +19,8 @@ import (
 )
 
 // streamsHandler supports:
-//  1. WHEP:    webrtc:http://192.168.1.123:1984/api/webrtc?src=camera1
-//  2. go2rtc:  webrtc:ws://192.168.1.123:1984/api/ws?src=camera1
+//  1. WHEP:    webrtc:http://192.168.1.123:1985/api/webrtc?src=camera1
+//  2. go2rtc:  webrtc:ws://192.168.1.123:1985/api/ws?src=camera1
 //  3. Wyze:    webrtc:http://192.168.1.123:5000/signaling/camera1?kvs#format=wyze
 //  4. Kinesis: webrtc:wss://...amazonaws.com/?...#format=kinesis#client_id=...#ice_servers=[{...},{...}]
 func streamsHandler(rawURL string) (core.Producer, error) {
@@ -67,7 +67,7 @@ func streamsHandler(rawURL string) (core.Producer, error) {
 }
 
 // go2rtcClient can connect only to go2rtc server
-// ex: ws://localhost:1984/api/ws?src=camera1
+// ex: ws://localhost:1985/api/ws?src=camera1
 func go2rtcClient(url string) (core.Producer, error) {
 	// 1. Connect to signalign server
 	conn, _, err := Dial(url)
@@ -181,7 +181,7 @@ func go2rtcClient(url string) (core.Producer, error) {
 }
 
 // whepClient - support WebRTC-HTTP Egress Protocol (WHEP)
-// ex: http://localhost:1984/api/webrtc?src=camera1
+// ex: http://localhost:1985/api/webrtc?src=camera1
 func whepClient(url string) (core.Producer, error) {
 	// 2. Create PeerConnection
 	pc, err := PeerConnection(true)
