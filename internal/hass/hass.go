@@ -86,9 +86,9 @@ func Init() {
 	})
 
 	// for Addon listen on hassio interface, so WebUI feature will work
-	if conf.API.Listen == "127.0.0.1:1984" {
+	if conf.API.Listen == "127.0.0.1:1985" {
 		if addr := HassioAddr(); addr != "" {
-			addr += ":1984"
+			addr += ":1985"
 			go func() {
 				log.Info().Str("addr", addr).Msg("[hass] listen")
 				if err := http.ListenAndServe(addr, api.Handler); err != nil {
