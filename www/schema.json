@@ -53,9 +53,9 @@
       "properties": {
         "listen": {
           "type": "string",
-          "default": ":1984",
+          "default": ":1985",
           "examples": [
-            "127.0.0.1:1984"
+            "127.0.0.1:1985"
           ]
         },
         "username": {
@@ -475,7 +475,7 @@
           "description": "Expose local address via Pinggy",
           "type": "string",
           "examples": [
-            "http://127.0.0.1:1984",
+            "http://127.0.0.1:1985",
             "tcp://192.168.1.123:554"
           ]
         }
