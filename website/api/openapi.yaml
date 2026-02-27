@@ -9,7 +9,7 @@ info:
     Ultimate camera streaming application with support RTSP, RTMP, HTTP-FLV, WebRTC, MSE, HLS, MP4, MJPEG, HomeKit, FFmpeg, etc.
 
 servers:
-  - url: http://localhost:1984
+  - url: http://localhost:1985
 
 tags:
   - name: Application
@@ -122,7 +122,7 @@ paths:
                 type: object
                 properties:
                   config_path: { type: string, example: "/config/go2rtc.yaml" }
-                  host: { type: string, example: "192.168.1.123:1984" }
+                  host: { type: string, example: "192.168.1.123:1985" }
                   rtsp:
                     type: object
                     properties:
